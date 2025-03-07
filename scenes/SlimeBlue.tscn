@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba10or6yb8get"]
+
+[ext_resource type="Texture2D" uid="uid://1ir7yofnx73q" path="res://assets/kenney_platformerpack/PNG/Enemies/slimeBlue.png" id="1_i5kpi"]
+[ext_resource type="PackedScene" uid="uid://bs13vg21akphf" path="res://scenes/AreaTrigger.tscn" id="2_xivqj"]
+
+[node name="SlimeBlue" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_i5kpi")
+
+[node name="AreaTrigger" parent="." instance=ExtResource("2_xivqj")]
+sceneName = "LoseScreen"
+
+[node name="CollisionShape2D" parent="AreaTrigger" index="0"]
+position = Vector2(0, 31.5)
+
+[editable path="AreaTrigger"]

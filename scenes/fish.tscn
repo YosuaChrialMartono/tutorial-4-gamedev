@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhjlob4s65dxf"]
+
+[ext_resource type="Script" path="res://scenes/fish.gd" id="1_roe4j"]
+[ext_resource type="Texture2D" uid="uid://bivk5n8i3vnqc" path="res://assets/kenney_platformerpack/PNG/Enemies/fishBlue.png" id="2_58nyr"]
+[ext_resource type="PackedScene" uid="uid://bs13vg21akphf" path="res://scenes/AreaTrigger.tscn" id="3_srpk8"]
+
+[node name="Fish" type="RigidBody2D"]
+script = ExtResource("1_roe4j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_58nyr")
+flip_v = true
+
+[node name="AreaTrigger" parent="." instance=ExtResource("3_srpk8")]
+sceneName = "LoseScreen"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+
+[editable path="AreaTrigger"]
