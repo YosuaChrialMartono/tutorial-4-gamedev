@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bmruurjvfhcwb"]
+[gd_scene load_steps=12 format=4 uid="uid://bmruurjvfhcwb"]
 
 [ext_resource type="PackedScene" uid="uid://bc2fujtl13g10" path="res://scenes/Player.tscn" id="1_3fbgm"]
 [ext_resource type="Texture2D" uid="uid://b4n0an5ukj3aj" path="res://assets/kenney_platformerpack/PNG/Backgrounds/colored_desert.png" id="1_fogw5"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b01y2s6ghnd3g" path="res://assets/kenney_platformerpack/PNG/Items/flagRed1.png" id="5_7pik6"]
 [ext_resource type="Script" path="res://scripts/Spawner.gd" id="7_mqxcg"]
 [ext_resource type="PackedScene" uid="uid://ba10or6yb8get" path="res://scenes/SlimeBlue.tscn" id="8_dr3mp"]
+[ext_resource type="PackedScene" uid="uid://d05hb5a4yhm7f" path="res://scenes/Life Counter.tscn" id="9_alonb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_606f7"]
 texture = ExtResource("2_8knmq")
@@ -99,6 +100,10 @@ sceneName = "Level2"
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("7_mqxcg")
 obstacle = ExtResource("8_dr3mp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LifeCounter" parent="CanvasLayer" instance=ExtResource("9_alonb")]
 
 [editable path="FlagWin/AreaTrigger"]
 [editable path="AreaTrigger"]

@@ -25,7 +25,9 @@ Melanjutkan dari tutorial 4 dengan sedikit perubahan untuk mencocokan hasil akhi
 ## Latihan Mandiri
 
 -   Menambahkan tombol untuk kembali ke main menu di game over scene
+-   Menambahkan tombol untuk quit game di main menu menggunakan `get_tree().quit()`
 
 ## Polishing
 
 -   Menambahkan dekorasi pada lose screen
+-   Mengubah semua kemungkinan kalah pada game untuk mengurangi nyawa dibandingkan dengan implementasi semula yang lansung mengarah ke lose screen.
