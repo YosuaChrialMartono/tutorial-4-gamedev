@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=4 uid="uid://yqmk0vpvnyxr"]
+[gd_scene load_steps=11 format=4 uid="uid://yqmk0vpvnyxr"]
 
 [ext_resource type="PackedScene" uid="uid://bc2fujtl13g10" path="res://scenes/Player.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://b4n0an5ukj3aj" path="res://assets/kenney_platformerpack/PNG/Backgrounds/colored_desert.png" id="1_te5ck"]
 [ext_resource type="Texture2D" uid="uid://cluh2ekc38ktx" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_dirt.png" id="2_pyr6m"]
 [ext_resource type="Texture2D" uid="uid://c07s8kayuuxw5" path="res://assets/kenney_platformerpack/PNG/Items/flagGreen1.png" id="3_28gfv"]
 [ext_resource type="PackedScene" uid="uid://bs13vg21akphf" path="res://scenes/AreaTrigger.tscn" id="4_u6q2b"]
-[ext_resource type="Script" path="res://scenes/Spawner.gd" id="5_tqdfc"]
+[ext_resource type="Script" path="res://scripts/Spawner.gd" id="5_tqdfc"]
 [ext_resource type="PackedScene" uid="uid://bhjlob4s65dxf" path="res://scenes/fish.tscn" id="6_r5d38"]
+[ext_resource type="PackedScene" uid="uid://d05hb5a4yhm7f" path="res://scenes/Life Counter.tscn" id="8_0u8sn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6hup"]
 texture = ExtResource("2_pyr6m")
@@ -87,3 +88,7 @@ sceneName = "Level1"
 position = Vector2(477, -694)
 script = ExtResource("5_tqdfc")
 obstacle = ExtResource("6_r5d38")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LifeCounter" parent="CanvasLayer" instance=ExtResource("8_0u8sn")]

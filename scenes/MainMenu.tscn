@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://jgbltskav0us"]
+
+[ext_resource type="Texture2D" uid="uid://chgqimvh7rdh6" path="res://assets/Familiar Looking Rocket.png" id="1_gk7pv"]
+[ext_resource type="Script" path="res://scripts/new_game_button.gd" id="1_y2ow7"]
+[ext_resource type="Script" path="res://scripts/exit_game_button.gd" id="2_mjdh1"]
+
+[sub_resource type="SystemFont" id="SystemFont_2ty4g"]
+font_names = PackedStringArray("Lemon/Milk", "Times New Roman")
+font_weight = 550
+
+[node name="MainMenu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_2ty4g")
+theme_override_font_sizes/font_size = 60
+text = "Game Tutorial"
+
+[node name="NewGameButton" type="LinkButton" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "New Game"
+underline = 1
+script = ExtResource("1_y2ow7")
+scene_to_load = "Level1"
+
+[node name="ExitGameButton" type="LinkButton" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Exit"
+underline = 1
+script = ExtResource("2_mjdh1")
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_gk7pv")
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/NewGameButton" to="HBoxContainer/VBoxContainer/NewGameButton" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/ExitGameButton" to="HBoxContainer/VBoxContainer/ExitGameButton" method="_on_pressed"]

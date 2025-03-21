@@ -9,7 +9,7 @@
 texture = ExtResource("1_i5kpi")
 
 [node name="AreaTrigger" parent="." instance=ExtResource("2_xivqj")]
-sceneName = "LoseScreen"
+sceneName = "Game Over"
 
 [node name="CollisionShape2D" parent="AreaTrigger" index="0"]
 position = Vector2(0, 31.5)

@@ -15,3 +15,17 @@
 
 -   Menambahkan background pada level 1 dan menggunakan sprite2d
 -   Menambahkan timer pada lose screen dan win screen sehingga player bisa memainkan game dari awal
+
+# Tutorial 6 Game Development
+
+```
+Melanjutkan dari tutorial 4 dengan sedikit perubahan untuk mencocokan hasil akhir tutorial tersebut dengan tutorial 6
+```
+
+## Latihan Mandiri
+
+-   Menambahkan tombol untuk kembali ke main menu di game over scene
+
+## Polishing
+
+-   Menambahkan dekorasi pada lose screen

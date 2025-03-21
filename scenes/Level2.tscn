@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c07s8kayuuxw5" path="res://assets/kenney_platformerpack/PNG/Items/flagGreen1.png" id="3_jr8mt"]
 [ext_resource type="PackedScene" uid="uid://bs13vg21akphf" path="res://scenes/AreaTrigger.tscn" id="4_shaxn"]
 [ext_resource type="Texture2D" uid="uid://b01y2s6ghnd3g" path="res://assets/kenney_platformerpack/PNG/Items/flagRed1.png" id="5_7pik6"]
-[ext_resource type="Script" path="res://scenes/Spawner.gd" id="7_mqxcg"]
+[ext_resource type="Script" path="res://scripts/Spawner.gd" id="7_mqxcg"]
 [ext_resource type="PackedScene" uid="uid://ba10or6yb8get" path="res://scenes/SlimeBlue.tscn" id="8_dr3mp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_606f7"]
@@ -94,7 +94,7 @@ position = Vector2(-779, 325)
 texture = ExtResource("5_7pik6")
 
 [node name="AreaTrigger" parent="FlagLose" instance=ExtResource("4_shaxn")]
-sceneName = "LoseScreen"
+sceneName = "Level2"
 
 [node name="Spawner" type="Node2D" parent="."]
 script = ExtResource("7_mqxcg")
